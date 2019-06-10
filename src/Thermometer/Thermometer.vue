@@ -1,6 +1,5 @@
 <template>
-    <div class="thermometer" :class="classes">
-        
+    <div class="thermometer" :class="classes" :style="styles">
         <thermometer-statistics class="justify-content-between thermometer-statistics-left">
             <thermometer-statistic
                 :value="value"
@@ -77,6 +76,8 @@ export default {
 
         format: Function,
 
+        height: [Number, String],
+
         min: {
             type: Number,
             required: true
@@ -86,6 +87,7 @@ export default {
             type: Number,
             required: true
         },
+
 
         goal: {
             type: Number,
@@ -129,6 +131,14 @@ export default {
 
     },
 
+    methods: {
+
+        unit(value, defaultValue = 'px') {
+            return isFinite(value) ? value + defaultValue : value;
+        }
+        
+    },
+
     computed: {
 
         currentTicks() {
@@ -152,6 +162,12 @@ export default {
             return {
                 'thermometer-vertical': this.orientation === 'vertical',
                 'thermometer-horizontal': this.orientation === 'horizontal'
+            };
+        },
+
+        styles() {
+            return {
+                height: this.unit(this.height)
             };
         }
 

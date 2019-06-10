@@ -225,12 +225,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"16a3208e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/Thermometer.vue?vue&type=template&id=cf427d08&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"thermometer",class:_vm.classes},[_c('thermometer-statistics',{staticClass:"justify-content-between thermometer-statistics-left"},[_c('thermometer-statistic',{attrs:{"value":_vm.value,"format":_vm.format,"label":"Raised"}}),_c('thermometer-statistic',{attrs:{"value":_vm.completed,"label":"of goal reached"}})],1),_c('div',{staticClass:"thermometer-container"},[_c('div',{staticClass:"thermometer-tube"},[_c('div',{staticClass:"thermometer-inner-tube"},[_c('div',{staticClass:"thermometer-value",style:({height: ((_vm.percentage(_vm.height)) + "%")})})])]),_vm._m(0)]),_c('thermometer-ticks',{attrs:{"min":_vm.min,"max":_vm.max,"value":_vm.value,"ticks":_vm.ticks,"values":_vm.values,"format":_vm.format,"intervals":_vm.intervals,"percentages":_vm.percentages}}),_c('thermometer-statistics',{staticClass:"justify-content-center thermometer-statistics-right"},[_c('thermometer-statistic',{attrs:{"value":_vm.goal,"format":_vm.format,"label":"Goal"}})],1)],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2b57431a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/Thermometer.vue?vue&type=template&id=06f39a12&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"thermometer",class:_vm.classes,style:(_vm.styles)},[_c('thermometer-statistics',{staticClass:"justify-content-between thermometer-statistics-left"},[_c('thermometer-statistic',{attrs:{"value":_vm.value,"format":_vm.format,"label":"Raised"}}),_c('thermometer-statistic',{attrs:{"value":_vm.completed,"label":"of goal reached"}})],1),_c('div',{staticClass:"thermometer-container"},[_c('div',{staticClass:"thermometer-tube"},[_c('div',{staticClass:"thermometer-inner-tube"},[_c('div',{staticClass:"thermometer-value",style:({height: ((_vm.percentage(_vm.height)) + "%")})})])]),_vm._m(0)]),_c('thermometer-ticks',{attrs:{"min":_vm.min,"max":_vm.max,"value":_vm.value,"ticks":_vm.ticks,"values":_vm.values,"format":_vm.format,"intervals":_vm.intervals,"percentages":_vm.percentages}}),_c('thermometer-statistics',{staticClass:"justify-content-center thermometer-statistics-right"},[_c('thermometer-statistic',{attrs:{"value":_vm.goal,"format":_vm.format,"label":"Goal"}})],1)],1)}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"thermometer-reservoir"},[_c('div',{staticClass:"thermometer-reservoir-reflection"})])}]
 
 
-// CONCATENATED MODULE: ./src/Thermometer/Thermometer.vue?vue&type=template&id=cf427d08&
+// CONCATENATED MODULE: ./src/Thermometer/Thermometer.vue?vue&type=template&id=06f39a12&
 
 // CONCATENATED MODULE: ./src/Thermometer/PercentageMixin.js
 /* harmony default export */ var PercentageMixin = ({
@@ -241,7 +241,7 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
 
   }
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"16a3208e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/ThermometerTicks.vue?vue&type=template&id=7c6d0595&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2b57431a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/ThermometerTicks.vue?vue&type=template&id=7c6d0595&
 var ThermometerTicksvue_type_template_id_7c6d0595_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"thermometer-ticks"},[_vm._l((_vm.currentTicks),function(tick,i){return [_c('div',{key:tick,staticClass:"thermometer-tick"},[_c('span',{key:tick,staticClass:"thermometer-tick-label"},[_vm._v("\n                "+_vm._s(_vm.format(tick, _vm.percentage(tick)))+"\n            ")])]),(_vm.intervals && i + 1 < _vm.currentTicks.length)?_vm._l((9),function(i){return _c('div',{key:(tick + "-" + i),staticClass:"thermometer-interval-tick",class:{'thermometer-half-tick': 5 === i}})}):_vm._e()]})],2)}
 var ThermometerTicksvue_type_template_id_7c6d0595_staticRenderFns = []
 
@@ -442,7 +442,7 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var ThermometerTicks = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"16a3208e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/ThermometerStatistic.vue?vue&type=template&id=b56ba8b2&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2b57431a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/ThermometerStatistic.vue?vue&type=template&id=b56ba8b2&
 var ThermometerStatisticvue_type_template_id_b56ba8b2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"thermometer-statistic"},[_c('div',{staticClass:"thermometer-statistic-value"},[_vm._v(_vm._s(_vm.format(_vm.value)))]),_c('div',{staticClass:"thermometer-statistic-label"},[_vm._v(_vm._s(_vm.label))])])}
 var ThermometerStatisticvue_type_template_id_b56ba8b2_staticRenderFns = []
 
@@ -494,7 +494,7 @@ var ThermometerStatistic_component = normalizeComponent(
 )
 
 /* harmony default export */ var ThermometerStatistic = (ThermometerStatistic_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"16a3208e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/ThermometerStatistics.vue?vue&type=template&id=84f01fbe&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2b57431a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Thermometer/ThermometerStatistics.vue?vue&type=template&id=84f01fbe&
 var ThermometerStatisticsvue_type_template_id_84f01fbe_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"thermometer-statistics"},[_vm._t("default")],2)}
 var ThermometerStatisticsvue_type_template_id_84f01fbe_staticRenderFns = []
 
@@ -586,7 +586,6 @@ var ThermometerStatistics_component = normalizeComponent(
 //
 //
 //
-//
 
 
 
@@ -604,6 +603,7 @@ var ThermometerStatistics_component = normalizeComponent(
     vertical: Boolean,
     horizontal: Boolean,
     format: Function,
+    height: [Number, String],
     min: {
       type: Number,
       required: true
@@ -650,6 +650,12 @@ var ThermometerStatistics_component = normalizeComponent(
 
     }
   },
+  methods: {
+    unit(value, defaultValue = 'px') {
+      return isFinite(value) ? value + defaultValue : value;
+    }
+
+  },
   computed: {
     currentTicks() {
       const ticks = this.ticks instanceof Array ? this.ticks : [];
@@ -669,6 +675,12 @@ var ThermometerStatistics_component = normalizeComponent(
       return {
         'thermometer-vertical': this.orientation === 'vertical',
         'thermometer-horizontal': this.orientation === 'horizontal'
+      };
+    },
+
+    styles() {
+      return {
+        height: this.unit(this.height)
       };
     }
 
