@@ -1,5 +1,5 @@
 import Thermometer from './Thermometer/Thermometer';
 
-export {
+export default {
     Thermometer
 };

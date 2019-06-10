@@ -4,7 +4,7 @@ var ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
     configureWebpack: {
         output: {
-            // libraryExport: 'default'
+            libraryExport: 'default'
         },
         plugins: [
             // new ManifestPlugin()
