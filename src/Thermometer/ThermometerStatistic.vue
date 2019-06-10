@@ -42,6 +42,8 @@ export default {
         font-size: .85em;
         font-weight: 300;
         color: $gray-600;
+        word-wrap: none;
+        word-break: keep-all;
     }
 
 }

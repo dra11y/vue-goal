@@ -1,6 +1,6 @@
 <template>
     <div class="thermometer" :class="classes" :style="styles">
-        <thermometer-statistics class="justify-content-between thermometer-statistics-left">
+        <thermometer-statistics v-if="statistics" class="justify-content-between thermometer-statistics-left">
             <thermometer-statistic
                 :value="value"
                 :format="format"
@@ -16,7 +16,7 @@
         <div class="thermometer-container">
             <div class="thermometer-tube">
                 <div class="thermometer-inner-tube">
-                    <div class="thermometer-value" :style="{height: `${percentage(height)}%`}" />
+                    <div class="thermometer-value" :style="{height: `${percentage(currentValue)}%`}" />
                 </div>
             </div>
             <div class="thermometer-reservoir">
@@ -35,7 +35,7 @@
             :percentages="percentages"
         />
 
-        <thermometer-statistics class="justify-content-center thermometer-statistics-right">
+        <thermometer-statistics v-if="statistics" class="justify-content-center thermometer-statistics-right">
             <thermometer-statistic
                 :value="goal"
                 :format="format"
@@ -167,7 +167,7 @@ export default {
 
         styles() {
             return {
-                height: this.unit(this.height)
+                height: this.height && this.unit(this.height)
             };
         }
 
@@ -183,13 +183,13 @@ export default {
 
     data() {
         return {
-            height: 0
+            currentValue: 0
         };
     },
 
     mounted() {
         setTimeout(() => {
-            this.height = this.value;
+            this.currentValue = this.value;
         });
     }
 
