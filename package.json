@@ -1,7 +1,7 @@
 {
   "name": "vue-goal",
   "description": "A Vue component to display fundraising goals with a pure animated HTML/CSS thermometer.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "module": "./src/index.js",
   "main": "./dist/VueGoal.umd.min.js",
   "scripts": {
