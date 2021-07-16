@@ -201,6 +201,8 @@ export default {
 </script>
 
 <style lang="scss">
+@use 'sass:math';
+
 $thermometer-color: red;
 $thermometer-background: #ddd;
 $thermometer-tube-size: 1.2em;
