@@ -206,7 +206,7 @@ $thermometer-background: #ddd;
 $thermometer-tube-size: 1.2em;
 $thermometer-reservoir-size: 3em;
 $thermometer-tube-background: #fff;
-$thermometer-tube-border: calc($thermometer-tube-size / 4.5) solid #aaa;
+$thermometer-tube-border: math.div($thermometer-tube-size, 4.5) solid #aaa;
 
 .thermometer {
     display: flex;
