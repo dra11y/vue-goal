@@ -1,47 +1,51 @@
 <template>
     <div class="thermometer" :class="classes" :style="styles">
-        <thermometer-statistics v-if="statistics" class="justify-content-between thermometer-statistics-left">
-            <thermometer-statistic
-                :value="value"
-                :format="format"
-                label="Raised"
-            />
 
-            <thermometer-statistic
-                :value="completed"
-                label="of goal reached"
-            />
-        </thermometer-statistics>
-
-        <div class="thermometer-container">
-            <div class="thermometer-tube">
-                <div class="thermometer-inner-tube">
-                    <div class="thermometer-value" :style="{height: `${percentage(currentValue)}%`}" />
-                </div>
-            </div>
-            <div class="thermometer-reservoir">
-                <div class="thermometer-reservoir-reflection" />
-            </div>
-        </div>
-
-        <thermometer-ticks
-            :min="min"
-            :max="max"
-            :value="value"
-            :ticks="ticks"
-            :values="values"
-            :format="format"
-            :intervals="intervals"
-            :percentages="percentages"
-        />
-
-        <thermometer-statistics v-if="statistics" class="justify-content-center thermometer-statistics-right">
+        <thermometer-statistics v-if="statistics" class="thermometer-statistics-top">
             <thermometer-statistic
                 :value="goal"
                 :format="format"
                 label="Goal"
             />
         </thermometer-statistics>
+
+        <div class="thermometer-outer-container">
+
+            <thermometer-statistics v-if="statistics" class="is-justify-content-space-between thermometer-statistics-left">
+                <thermometer-statistic
+                    :value="value"
+                    :format="format"
+                    label="Raised"
+                />
+
+                <thermometer-statistic
+                    :value="completed"
+                    label="of goal reached"
+                />
+            </thermometer-statistics>
+
+            <div class="thermometer-container">
+                <div class="thermometer-tube">
+                    <div class="thermometer-inner-tube">
+                        <div class="thermometer-value" :style="{height: `${percentage(currentValue)}%`}" />
+                    </div>
+                </div>
+                <div class="thermometer-reservoir">
+                    <div class="thermometer-reservoir-reflection" />
+                </div>
+            </div>
+
+            <thermometer-ticks
+                :min="min"
+                :max="max"
+                :value="value"
+                :ticks="ticks"
+                :values="values"
+                :format="format"
+                :intervals="intervals"
+                :percentages="percentages"
+            />
+        </div>
 
     </div>
 </template>
@@ -136,7 +140,7 @@ export default {
         unit(value, defaultValue = 'px') {
             return isFinite(value) ? value + defaultValue : value;
         }
-        
+
     },
 
     computed: {
@@ -153,7 +157,7 @@ export default {
 
             }
         },
-        
+
         completed() {
             return `${(this.value / (this.goal - this.min) * 100).toFixed(2).replace(/\.00$/, '')}%`;
         },
@@ -197,44 +201,50 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'bootstrap/scss/_functions.scss';
-@import 'bootstrap/scss/_variables.scss';
-
 $thermometer-color: red;
-$thermometer-background: $gray-100;
+$thermometer-background: #ddd;
 $thermometer-tube-size: 1.2em;
 $thermometer-reservoir-size: 3em;
-$thermometer-tube-background: $white;
-$thermometer-tube-border: $thermometer-tube-size / 4.5 solid $gray-300;
+$thermometer-tube-background: #fff;
+$thermometer-tube-border: $thermometer-tube-size / 4.5 solid #aaa;
 
 .thermometer {
-    font-size: 2em;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
 
     &.thermometer-vertical {
-        .thermometer-container {
-            align-items: center;
-            flex-direction: column;
+        flex-grow: 1;
+        flex-direction: column;
 
-            .thermometer-value {
-                bottom: 0;
-                width: 100%;
-            }
+        .thermometer-outer-container {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
 
-            .thermometer-tube {
-                width: .75em;
-                height: 100%;
-                transform: translateY(.125em);
-                background: $thermometer-tube-background;
-                border-radius: 2em 2em 0 0;
+            .thermometer-container {
+                align-items: center;
+                flex-direction: column;
 
-                .thermometer-inner-tube {
-                    position: absolute;
+                .thermometer-value {
+                    bottom: 0;
                     width: 100%;
+                }
+
+                .thermometer-tube {
+                    width: .75em;
                     height: 100%;
-                    overflow: hidden;
-                    border-radius: 2em 2em 0 0;
+                    transform: translateY(.125em);
                     background: $thermometer-tube-background;
+                    border-radius: 2em 2em 0 0;
+
+                    .thermometer-inner-tube {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        border-radius: 2em 2em 0 0;
+                        background: $thermometer-tube-background;
+                    }
                 }
             }
         }
@@ -338,6 +348,15 @@ $thermometer-tube-border: $thermometer-tube-size / 4.5 solid $gray-300;
     .thermometer-statistics-right {
         .thermometer-statistic-value {
             font-size: 2em;
+        }
+    }
+
+    .thermometer-statistics-top {
+        padding: 0;
+        text-align: center;
+
+        .thermometer-statistic-value {
+            font-size: 3em;
         }
     }
 }

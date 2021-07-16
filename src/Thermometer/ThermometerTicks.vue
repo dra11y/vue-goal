@@ -7,7 +7,7 @@
                 </span>
             </div>
             <template v-if="intervals && i + 1 < currentTicks.length">
-                <div 
+                <div
                     v-for="i in 9"
                     :key="`${tick}-${i}`"
                     class="thermometer-interval-tick"
@@ -24,7 +24,7 @@ import PercentageMixin from './PercentageMixin';
 export default {
 
     name: 'ThermometerTicks',
-    
+
     mixins: [
         PercentageMixin
     ],
@@ -38,12 +38,12 @@ export default {
         percentages: Boolean,
 
         ticks: [Boolean, Number, Array],
-        
+
         intervals: {
             type: Boolean,
             default: false
         },
-        
+
         values: {
             type: Boolean,
             default: function() {
@@ -76,10 +76,10 @@ export default {
                 return ticks.reverse();
             }
         },
-        
+
         classes() {
             return {
-                
+
             };
         }
 
@@ -87,7 +87,7 @@ export default {
 
     data() {
         return {
-            
+
         };
     }
 
@@ -95,14 +95,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'bootstrap/scss/_functions.scss';
-@import 'bootstrap/scss/_variables.scss';
-
 $thermometer-color: red;
-$thermometer-background: $gray-100;
+$thermometer-background: #ddd;
 $thermometer-tube-size: 1.2em;
-$thermometer-tube-background: $white;
-$thermometer-tube-border: $thermometer-tube-size / 4.5 solid $gray-300;
+$thermometer-tube-background: #fff;
+$thermometer-tube-border: $thermometer-tube-size / 4.5 solid #aaa;
 
 .thermometer-ticks {
     display: flex;
@@ -110,7 +107,7 @@ $thermometer-tube-border: $thermometer-tube-size / 4.5 solid $gray-300;
     justify-content: space-between;
     margin-top: 1em;
     margin-bottom: 3.5em;
-    
+
     .thermometer-tick {
         position: relative;
         height: calc(1em / 10);
@@ -120,7 +117,7 @@ $thermometer-tube-border: $thermometer-tube-size / 4.5 solid $gray-300;
             width: 1.15em;
             height: 1px;
             position: absolute;
-            border-top: calc(1em / 10) solid $gray-800;
+            border-top: calc(1em / 10) solid #555;
         }
 
         .thermometer-tick-label {
@@ -133,11 +130,11 @@ $thermometer-tube-border: $thermometer-tube-size / 4.5 solid $gray-300;
     .thermometer-interval-tick {
         width: 1em;
         position: relative;
-        border-top: 1px solid $gray-600;
+        border-top: 1px solid #888;
     }
 
     .thermometer-half-tick {
-        border-top: 2px solid $gray-600;
+        border-top: 2px solid #888;
     }
 }
 </style>

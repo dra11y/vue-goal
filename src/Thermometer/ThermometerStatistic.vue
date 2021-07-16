@@ -11,9 +11,9 @@ export default {
     name: 'ThermometerStatistic',
 
     props: {
-        
+
         value: [String, Number],
-        
+
         label: String,
 
         format: {
@@ -27,21 +27,18 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'bootstrap/scss/_functions.scss';
-@import 'bootstrap/scss/_variables.scss';
-
 .thermometer-statistic {
-    
+
     .thermometer-statistic-value {
         font-weight: 600;
         line-height: 1em;
         font-size: 1.75em;
     }
-    
+
     .thermometer-statistic-label {
         font-size: .85em;
         font-weight: 300;
-        color: $gray-600;
+        color: #888;
         word-wrap: none;
         word-break: keep-all;
     }
